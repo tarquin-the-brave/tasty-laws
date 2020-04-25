@@ -3,4 +3,4 @@ packages:
 - '.'
 - 'laws'
 - 'tasty-dumbcheck'
-resolver: lts-3.7
+resolver: lts-15.8

@@ -1,5 +1,5 @@
 name:                tasty-laws
-version:             0.3.1
+version:             0.3.2
 synopsis:            Test common laws
 description:
   Preassembled 'tasty' 'TestTree's for property testing 'Monoid', 'Functor',
@@ -27,10 +27,10 @@ library
                        Test.Tasty.Laws.Functor,
                        Test.Tasty.Laws.Monad,
                        Test.Tasty.Laws.Monoid
-  build-depends:       base >=4.6 && <4.9,
-                       laws,
+  build-depends:       base >=4.6 && <5,
+                       laws >= 0.4.1,
                        tasty >=0.10,
-                       tasty-dumbcheck
+                       tasty-dumbcheck >= 0.1.1
   if impl(ghc < 7.8)
      build-depends: tagged >=0.7.2
 
@@ -40,7 +40,7 @@ test-suite tasty
   hs-source-dirs:      tests
   main-is:             tasty.hs
   ghc-options:         -Wall -threaded
-  build-depends:       base >=4.6 && <4.9,
+  build-depends:       base >=4.6 && <5,
                        tasty >=0.10,
                        tasty-dumbcheck,
                        tasty-laws
